@@ -1,0 +1,36 @@
+import math
+
+class Rational:
+    def __init__(self, numerator, denominator):
+        self.numerator = numerator
+        self.denominator = denominator
+    def drob(self):
+        q = math.floor(self.numerator)
+        w = math.floor(self.denominator)
+        l = math.gcd(q, w)
+        numerator_res = q // l
+        denominator_res = w // l
+        drob_res = str(numerator_res) + "/" + str(denominator_res)
+        return(drob_res)
+    def desiatkova(self):
+        desiatkova_res = float(self.numerator/ self.denominator)
+        return(round(desiatkova_res, 5))
+    def dodrat(self):
+        a = self.numerator + self.denominator
+        return(round(a, 1))
+    def vidrat(self):
+        a = self.numerator - self.denominator
+        return (round(a, 1))
+    def umrat(self):
+        a = self.numerator * self.denominator
+        return (round(a, 1))
+    def dilrat(self):
+        a = self.numerator / self.denominator
+        return (round(a, 1))
+clop = Rational(10.4545, 25.3343)
+print(clop.drob())
+print(clop.desiatkova())
+print(clop.dodrat())
+print(clop.vidrat())
+print(clop.umrat())
+print(clop.dilrat())

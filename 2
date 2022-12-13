@@ -1,0 +1,51 @@
+class Notebook:
+    spisok = []
+    def __init__(self, name, surname, number, birthday):
+        self.name = name
+        self.surname = surname
+        self.number = number
+        self.birthday = birthday
+
+    def get_name(self):
+        return self.name
+
+    def get_surname(self):
+        return self.surname
+
+    def get_number(self):
+        return self.number
+
+    def get_birthday(self):
+        return self.birthday
+
+    def __add__(self, other):
+        spisok.append(other)
+
+    def get_list(self):
+        print(spisok)
+
+    def __sub__(self, other):
+        spisok.pop()
+
+    def __mul__(self, other):
+        index = spisok.index(other)
+        return spisok[index]
+spisok = []
+
+notebook = Notebook("John", "Doe", "555-555-5555", "01/01/2000")
+
+some_new_element = Notebook("Oksana", "Honcharenko", "222-222-222", "05/10/1974")
+
+
+name = print(notebook.get_name())
+surname = print(notebook.get_surname())
+number = print(notebook.get_number())
+birthday = print(notebook.get_birthday())
+
+
+
+notebook.__add__(notebook)
+notebook.get_list()
+
+
+
